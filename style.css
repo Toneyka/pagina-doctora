@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* --- Barra superior --- */
+.top-bar {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+
+/* --- Encabezado --- */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0077b6;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0096c7;
+}
+
+.btn-cita {
+  background: #ff4081;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-cita:hover {
+  background: #e91e63;
+}
+
+/* --- Hero --- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  padding: 40px 60px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #0077b6;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-primario {
+  background: #0077b6;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-primario:hover {
+  background: #0096c7;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+}
+
+/* --- Servicios --- */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.service-box {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box i {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.service-box:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* --- Tips --- */
+.news {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.news-grid article {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.news-grid article:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.news-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* --- Footer --- */
+footer {
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-buttons {
+  margin: 10px 0;
+}
+
+.social {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.social:hover {
+  transform: scale(1.2);
+}
+
+.whatsapp { color: #25D366; }
+.instagram { color: #E1306C; }
+.tiktok { color: #fff; }
+
+/* 🔥 Animación del header */
+.animate-header {
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔥 Animación del nombre en el hero */
+.animate-title {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeZoom 1s ease-out forwards;
+  animation-delay: 0.4s; /* espera un poquito después del header */
+}
+
+@keyframes fadeZoom {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
